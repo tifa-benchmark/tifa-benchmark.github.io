@@ -198,19 +198,14 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Despite thousands of researchers, engineers, and artists actively working on improving text-to-image generation models, systems often fail to produce images that accurately align with the text inputs. We introduce <b>TIFA (Text-to-image Faithfulness evaluation with question Answering)</b>, an automatic evaluation metric that measures the <b>faithfulness of a generated image to its text input</b> via visual question answering (VQA). 
+            Despite thousands of researchers, engineers, and artists actively working on improving text-to-image generation models, systems often fail to produce images that accurately align with the text inputs. We introduce <span style="color: red;"><b>TIFA (Text-to-image Faithfulness evaluation with question Answering)</b></span>, an automatic evaluation metric that measures the <span style="color: red;"><b>faithfulness of a generated image to its text input</b></span> via visual question answering (VQA). 
           </p>
            <p>
-            Specifically, given a text input, we
-            automatically generate several question-answer pairs using a language model. We calculate image faithfulness by checking
-            whether existing VQA models can answer these questions using the generated image. TIFA is a reference-free metric that
-            allows for fine-grained and interpretable evaluations of generated images.TIFA also has better correlations with human
-            judgments than existing metrics. Based on this approach, we introduce TIFA v1.0, a benchmark consisting of 4K diverse
-            text inputs and 25K questions across 12 categories (object, counting, etc.). We present a comprehensive evaluation of
-            existing text-to-image models using TIFA v1.0 and highlight the limitations and challenges of current models. For
-            instance, we find that current text-to-image models, despite doing well on color and material, still struggle in
-            counting, spatial relations, and composing multiple objects. We hope our benchmark will help carefully measure the
-            research progress in text-to-image synthesis and provide valuable insights for further research.
+            Specifically, given a text input, we automatically generate several question-answer pairs using a language model. We calculate image faithfulness by checking whether existing VQA models can answer these questions using the generated image. TIFA is a reference-free metric that allows for fine-grained and interpretable evaluations of generated images.TIFA also has better correlations with human judgments than existing metrics. 
+          </p>
+          
+          <p>
+            Based on this approach, we introduce <span style="color: red;"><b>TIFA v1.0</b></span>, a benchmark consisting of 4K diverse text inputs and 25K questions across 12 categories (object, counting, etc.). We present a comprehensive evaluation of existing text-to-image models using TIFA v1.0 and highlight the limitations and challenges of current models. For instance, we find that current text-to-image models, despite doing well on color and material, still <span style="color: red;"><b>struggle in counting, spatial relations, and composing multiple objects</b></span>. We hope our benchmark will help carefully measure the research progress in text-to-image synthesis and provide valuable insights for further research.
           </p>
           
         </div>
