@@ -238,8 +238,16 @@
       <h2 class="title is-3">How does it work?</h2>
       <img src="static/images/tifa_webapproach.png">
       <div class="content has-text-justified">
-
+        <p>
+          (a) <b>Overview of how TIFA evaluates the faithfulness of a synthesized image.</b> TIFA uses a language model (LM), a question answering (QA) model, and a visual question answering (VQA) model. Given a text input, we generate several question-answer pairs with the LM and then filter them via the QA model. To evaluate the faithfulness of a synthesized image to the text input, a VQA model answers these visual questions using the image, and we check the answers for correctness.
         </p>
+        <p>
+          (b) <b>TIFA v1.0 benchmark.</b> While TIFA is applicable to any text prompt, to allow direct comparison across different studies, and for ease of use, we introduce the TIFA v1.0 benchmark, a repository of text inputs along with pre-generated question-answer pairs. To evaluate a text-to-image model, a user first produces the images for the text inputs in TIFA v1.0 and then performs VQA with our provided tools on generated images to compute TIFA.
+        </p>
+        <p>
+          (c) <b>Our question-answer pair generation pipeline.</b> The whole pipeline can be executed via a single inference of GPT-3 via in-context learning. Given the text prompt, GPT-3 first extracts the elements and then generates two questions for each element. The GPT-3 output is then parsed and filtered by UnifiedQA.
+        </p>
+
       </div>
     </div>
   </div>
