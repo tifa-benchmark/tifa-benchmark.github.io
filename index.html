@@ -6,7 +6,7 @@
         content="TIFA: Accurate and Interpretable Text-to-Image Faithfulness Evaluation with Question Answering">
   <meta name="keywords" content="Text-to-Image, Evaluation, VQA, GPT-3">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TIFA</title>
+  <title>TIFA: Accurate and Interpretable Text-to-Image Faithfulness Evaluation with Question Answering</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -79,7 +79,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title"><img src="static/images/tifa.png" alt="icon" style="width:80px; transform: translateY(20%);">TIFA: Text-to-Image Faithfulness Evaluation with Question Answering</h1>
+          <h1 class="title is-1 publication-title"><img src="static/images/tifa.png" alt="icon" style="width:80px; transform: translateY(20%);"><span style="color: rgb(178, 51, 51);"><b>TIFA</b></span>: Text-to-Image Faithfulness Evaluation with Question Answering</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://yushi-hu.github.io/">Yushi Hu</a><sup>1</sup>,</span>
@@ -92,13 +92,13 @@
               <a href="https://homes.cs.washington.edu/~yizhongw/">Yizhong Wang</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              <a href="https://people.ece.uw.edu/ostendorf/">Mari Ostendorf</a><sup>1</sup>
+              <a href="https://people.ece.uw.edu/ostendorf/">Mari Ostendorf</a><sup>1</sup>,
             </span>
               <span class="author-block">
-                    <a href="http://www.ranjaykrishna.com/">Ranjay Krishna</a><sup>1</sup>
+                    <a href="http://www.ranjaykrishna.com/">Ranjay Krishna</a><sup>1</sup>,
                     </span>
             <span class="author-block">
-              <a href="http://nasmith.github.io/">Noah A. Smith</a><sup>1,2</sup>,
+              <a href="http://nasmith.github.io/">Noah A. Smith</a><sup>1,2</sup>
             </span>
 
           </div>
@@ -153,7 +153,7 @@
               </span>
 
       <span class="link-block">
-        <a href="https://tifa-benchmark.github.io" class="external-link button is-normal is-rounded is-dark">
+        <a href="#leaderboard" class="external-link button is-normal is-rounded is-dark">
           <span class="icon">
             <i class="far fa-images"></i>
           </span>
@@ -272,13 +272,13 @@
 
 
 <section class="hero is-small">
-  <div class="hero-body">
+  <div class="hero-body" id="leaderboard">
     <div class="container is-max-desktop is-centered has-text-centered">
       <h2 class="title is-3">Text-to-Image Model Leaderboard</h2>
       <img src="static/images/tifa_leaderboard.png"  width=80%>
       <div class="content has-text-justified">
-        <p>
-          We benchmarked 
+        <p><br>
+          We benchmark several text-to-image models, including AttnGAN, X-LXMERT, VQ-Diffusion, minDALL-E, and Stable Diffusion v1.1, v1.5, and v2.1. The score they get on TIFA v1.0 is shown above. The horizontal axis shows their release dates. We also mark the release date of OpenAI's DALL-E 1 model. We can see a clear trend of how text-to-image models evolve over time. There is a jump in TIFA score after DALL-E is released, from 60% to 75%.
         </p>
       </div>
     </div>
@@ -291,7 +291,8 @@
       <h2 class="title is-3">What are Stable Diffusion models struggling on?</h2>
       <img src="static/images/question_type.png">
       <div class="content has-text-justified">
-
+        <p><br>
+          Accuracy on each type of question in the TIFA v1.0 benchmark. The text-to-image models are Stable Diffusion v1.1, v1.5, and v2.1. We order the categories by the average score Stable Diffusion v2.1 gets on corresponding questions. For COCO captions, we also include the accuracy of the ground-truth images for reference. We can see that Stable Diffusion is <span style="color: red;"><b>struggling in shape, counting, and spatial relations.</b></span> "other" mainly contains <span style="color: red;"><b>abstract art notions</b></span>, and models are also struggling with them. Besides, we observe that generating images from real image captions in COCO is much easier than generating images from free-form text prompts.
         </p>
       </div>
     </div>
@@ -305,7 +306,8 @@
       <h2 class="title is-3">Composing multiple objects is difficult</h2>
       <img src="static/images/compositionality.png" width=60%>
       <div class="content has-text-justified">
-
+        <p><br>
+          TIFA vs. number of entities (objects, animals, humans, food) in the text input. The accuracy starts to drop when more than 5 entities are added to the text, showing that compositionality is hard for text-to-image models. Meanwhile, TIFA scores for MSCOCO ground-truth (GT) images remain consistent.
         </p>
       </div>
     </div>
@@ -318,14 +320,28 @@
       <h2 class="title is-3">TIFA is more correlated with human judgments than CLIP</h2>
       <img src="static/images/tifa_compare.png" width=60%>
       <div class="content has-text-justified">
-
-        </p>
+          <p><br>
+            We also collect human judgments on images generated by recent text-to-image models, using TIFA v1.0 text inputs. Each annotator gives a Likert Scale of 1-5 on "Does the image match the text?". This table shows the correlation between each automatic metric and human judgments. We can see that <span style="color: red;"><b>TIFA is more accurate than prior metrics (CLIP and captions)</b></span> for evaluating text-to-image faithfulness. We hypothesize that the major challenge of these prior metrics is that they summarize the image outputs and text inputs into a single representation (embedding/caption). <span style="color: red;"><b>In contrast, TIFA exploits the power of LLMs to decompose the text input into fine-grained probes, which allows VQA to capture more nuanced aspects of the text input and generated image.</b></span>
       </div>
     </div>
   </div>
 </section>
 
-
+<section class="section is-light" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@misc{hu2023tifa,
+    title={TIFA: Accurate and Interpretable Text-to-Image Faithfulness Evaluation with Question Answering},
+    author={Yushi Hu and Benlin Liu and Jungo Kasai and Yizhong Wang and Mari Ostendorf and Ranjay Krishna and Noah A.
+    Smith},
+    year={2023},
+    eprint={2303.11897},
+    archivePrefix={arXiv},
+    primaryClass={cs.CV}
+    }
+</code></pre>
+  </div>
+</section>
 
 
 
