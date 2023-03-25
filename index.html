@@ -194,6 +194,29 @@
 </section>
 
 
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Why TIFA?</h2>
+        <div class="content has-text-justified">
+          <p>
+            Experiments show that <span style="color: red;">TIFA is much more accurate than CLIP</span> in evaluating generated images, while being <span style="color: red;">fine-grained and interpretable</span>. It is an ideal choice for fine-grained automatic evaluation of image generation.
+          </p>
+          <p>
+            TIFA works better because it leverages LLMs to decompose the text input into fine-grained probes (questions), which allows VQA to <span style="color: red;">capture more nuanced aspects</span> of the text input and the generated image. Meanwhile, <span style="color: red;">CLIP summarizes the image as a embedding</span>, making it inaccurate and unable to capture fine-grained details of an image.
+          </p>
+          <p>
+            <b>Do I need OpenAI API to run TIFA?</b> <span style="color: red;">No, you don't. We have pre-generated the questions for you in TIFA v1.0 benchmark.</span> Meanwhile, our code base provide tools to generate your own questions with GPT-3.5.
+          </p>
+
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+
 
 <section class="section">
   <div class="container is-max-desktop">
