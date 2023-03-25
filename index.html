@@ -202,13 +202,13 @@
         <h2 class="title is-3">Why TIFA?</h2>
         <div class="content has-text-justified">
           <p>
-            Experiments show that <span style="color: red;">TIFA is much more accurate than CLIP</span> in evaluating generated images, while being <span style="color: red;">fine-grained and interpretable</span>. It is an ideal choice for fine-grained automatic evaluation of image generation.
+            Experiments show that <span style="color: red;"><b>TIFA is much more accurate than CLIP</b></span> in evaluating generated images, while being <span style="color: red;"><b>fine-grained and interpretable</b></span>. It is an ideal choice for fine-grained automatic evaluation of image generation.
           </p>
           <p>
-            TIFA works better because it leverages LLMs to decompose the text input into fine-grained probes (questions), which allows VQA to <span style="color: red;">capture more nuanced aspects</span> of the text input and the generated image. Meanwhile, <span style="color: red;">CLIP summarizes the image as a embedding</span>, making it inaccurate and unable to capture fine-grained details of an image.
+            TIFA works better because it leverages LLMs to decompose the text input into fine-grained probes (questions), which allows VQA to <span style="color: red;"><b>capture more nuanced aspects</b></span> of the text input and the generated image. Meanwhile, <span style="color: red;"><b>CLIP summarizes the image as a embedding</b></span>, making it inaccurate and unable to capture fine-grained details of an image.
           </p>
           <p>
-            <b>Do I need OpenAI API to run TIFA?</b> <span style="color: red;">No, you don't. We have pre-generated the questions for you in TIFA v1.0 benchmark.</span> Meanwhile, we provide tools to generate your own questions with GPT-3.5.
+            <b>Do I need OpenAI API to run TIFA?</b> <span style="color: red;"><b>No, you don't. We have pre-generated the questions for you in TIFA v1.0 benchmark.</b></span> Meanwhile, we provide tools to generate your own questions with GPT-3.5.
           </p>
 
         </div>
@@ -355,15 +355,13 @@
 <section class="section is-light" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@misc{hu2023tifa,
-    title={TIFA: Accurate and Interpretable Text-to-Image Faithfulness Evaluation with Question Answering},
-    author={Yushi Hu and Benlin Liu and Jungo Kasai and Yizhong Wang and Mari Ostendorf and Ranjay Krishna and Noah A.
-    Smith},
-    year={2023},
-    eprint={2303.11897},
-    archivePrefix={arXiv},
-    primaryClass={cs.CV}
-    }
+    <pre><code>@article{hu2023tifa,
+title={TIFA: Accurate and Interpretable Text-to-Image Faithfulness Evaluation with Question Answering},
+author={Hu, Yushi and Liu, Benlin and Kasai, Jungo and Wang, Yizhong and Ostendorf, Mari and Krishna, Ranjay and Smith,
+Noah A},
+journal={arXiv preprint arXiv:2303.11897},
+year={2023}
+}
 </code></pre>
   </div>
 </section>
