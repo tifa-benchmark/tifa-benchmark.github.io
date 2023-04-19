@@ -153,6 +153,17 @@
                   </a>
               </span>
 
+              <!-- Annotations Link. -->
+              <span class="link-block">
+                <a href="https://github.com/Yushi-Hu/tifa/tree/main/human_annotations"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="far fa-images"></i>
+                  </span>
+                  <span>Human Annotations on Text-to-Image Faithfulness</span>
+                </a>
+              </span>
+
       <span class="link-block">
         <a href="#leaderboard" class="external-link button is-normal is-rounded is-dark">
           <span class="icon">
@@ -180,7 +191,8 @@
     <div class="hero-body">
 
       <h2 class="subtitle has-text-centered">
-        <span class="dnerf">TIFA</span> evaluates a synthesized image by asking and answering questions about it, utilizing the power of <span style="color: red;"><b>Large Language Models (now GPT-3)</b></span> and <span style="color: red;"><b>Image-to-Text Models (e.g. BLIP-2, GPT-4).</b></span>
+        Images synthesized by text-to-image models often do not follow the text inputs well. 
+        <span class="dnerf">TIFA</span> is a simple tool to evaluate fine-grained text-image alignment by asking and answering questions about it, utilizing the power of <span style="color: red;"><b>Large Language Models (now GPT-3)</b></span> and <span style="color: red;"><b>Image-to-Text Models (e.g. BLIP-2).</b></span>
       </h2>
       <img src="./static/images/tifa_webteaser.jpeg" alt="tifa teaser">
             <h2 class="subtitle has-text-centered">
@@ -250,6 +262,7 @@
         <p>
           Please email the authors if you want to submit to the leaderboard! <br>
           <b>TODO</b> A finetuned Flan-T5 that allows users to generate questions locally without relying on OpenAI API. <br>
+          <b>2023/04/19</b> We released the human annotations on text-to-image faithufulness for TIFA v1.0. Check it out in our repo!<br>
           <b>2023/03/24</b> TIFA v1.0 is released! We also updated our evaluation code, VQA modules, and question generation modules. <br>
         </p>
       </div>
